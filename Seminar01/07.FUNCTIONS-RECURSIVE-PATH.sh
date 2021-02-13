@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 print_dir(){
   dir=$1
   echo "Current DIR: $dir"
@@ -9,7 +8,7 @@ print_dir(){
 
   for i in $content
   do
-     echo "in: $i"
+     echo "$i"
      NewPath=$dir'/'$i
      if [ -d $NewPath ]
      then
@@ -24,6 +23,6 @@ for i in $directorys
   done
 }
 
-print_dir '.'
+print_dir $1
 
 
